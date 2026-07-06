@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* light grey background */
+    background-image: url('texture2.jpg'); /* texture fill */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the rgba values for the desired color and transparency */
+    color: #333; /* Text color is darker for better visibility */
+    padding: 3px 0; /* Adjust top and bottom padding */
+    position: relative; /* Ensure proper positioning of overlay */
+}
+
+header::before, footer::before {
+    content: ""; /* Create a pseudo-element for overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 3px; /* Adjust margin-top to reduce the gap */
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    font-weight: bold; /* Make text bold */
+    color: #333;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.form-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between the two forms */
+    margin-bottom: 20px; /* add margin between form and result */
+}
+
+.result-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: calc(50% - 10px);
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+header img {
+    max-width: 200px; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's a block-level element */
+    margin: 0 auto; /* Center horizontally */
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 100px; /* Set maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.8; /* Reduce opacity for a subtle effect */
+}
+header h1 {
+    flex-grow: 1; /* Allow the webpage name to grow and occupy remaining space */
+    text-align: center; /* Center align the webpage name */
+    margin: 0; /* Remove default margin for the webpage name */
+    margin-bottom: 3px; /* Adjust margin-bottom to reduce the gap */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Text color is darker for better visibility */
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+  }

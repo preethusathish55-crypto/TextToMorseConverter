@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption and Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Afrin 2.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Afrin 2.png" alt="Webpage Logo">
+                <h1>Text to Morsecode</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="form-container">
+                <button id="encryptButton">Encrypt</button>
+                <button id="decryptButton">Decrypt</button>
+              </div>
+              
+              <div id="popupContainer" class="popup hidden">
+                </div>
+            <div class="result-container">
+                {% if result %}
+                <h2>{{ operation }} Text</h2>
+                <p>{{ result }}</p>
+                {% endif %}
+            </div>
+            <div class="ads-container">
+                <!-- Google Ads Code Goes Here -->
+                <div class="ad">Google Ads Area</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Encryption and Decryption</p>
+        </div>
+    </footer>
+    <script>
+        const popupContainer = document.getElementById("popupContainer");
+      
+        // Function to toggle popup visibility
+        function togglePopup(action) {
+          const popupContent = `
+            <h2>${action.toUpperCase()} Text</h2>
+            <textarea name="text" placeholder="Enter text to ${action}"></textarea>
+            <button type="submit">Submit</button>
+          `;
+          popupContainer.innerHTML = popupContent; // Update popup content
+      
+          popupContainer.classList.toggle("hidden"); // Toggle visibility
+        }
+      
+        // Attach click events to buttons
+        const encryptButton = document.getElementById("encryptButton");
+        encryptButton.addEventListener("click", () => togglePopup("encrypt"));
+      
+        const decryptButton = document.getElementById("decryptButton");
+        decryptButton.addEventListener("click", () => togglePopup("decrypt"));
+      </script>
+</body>
+</html>
