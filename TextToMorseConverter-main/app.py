@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 app.secret_key = "supersecretkey"
 
+
 bcrypt = Bcrypt(app)
 
 
@@ -267,11 +268,10 @@ def logout():
     return redirect('/login')
 
 
+# Initialize database
+init_db()
+
 # RUN APP
 if __name__ == '__main__':
-
-    init_db()
-
     app.run(debug=True)
-    # Test update
     
